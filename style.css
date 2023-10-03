@@ -1,0 +1,114 @@
+:root {
+  --white: hsl(0, 0%, 100%);
+  --light-grey: hsl(217, 12%, 63%);
+  --medium-grey: hsl(216, 12%, 54%);
+  --dark-blue: #212832;
+  --very-dark-blue: hsl(216, 12%, 8%);
+  --orange: hsl(25, 97%, 53%);
+  --dark-grey: #252f39;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--very-dark-blue);
+  font-family: 'Overpass', sans-serif;
+}
+
+main {
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.dialog {
+  border-radius: 2rem;
+  padding: 2rem;
+  background-color: var(--dark-blue);
+  color: var(--medium-grey);
+  max-width: 20rem;
+  font-size: 14px;
+}
+
+.feedback-prompt-dialog-img {
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  padding: 1rem;
+  border-radius: 50%;
+  background-color: var(--dark-grey);
+}
+
+.feedback-prompt-title {
+  color: var(--white);
+  font-size: 1.8rem;
+  margin: 1rem 0 1rem 0;
+}
+
+#feedback-rate-choices {
+  display: flex;
+  justify-content: space-between;
+  margin: 1.5rem 0;
+}
+
+.feedback-score {
+  width: 17px;
+  height: 17px;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 50%;
+  background-color: var(--dark-grey);
+}
+
+.feedback-score:not(.active):hover {
+  cursor: pointer;
+  background-color: var(--orange);
+  color: var(--white);
+}
+
+.active {
+  background-color: var(--light-grey);
+  color: var(--white);
+}
+
+.dialog > button {
+  cursor: pointer;
+  width: 100%;
+  background-color: var(--orange);
+  border-radius: 1.5rem;
+  padding: 0.8rem;
+  outline: none;
+  border-width: 0;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--white);
+}
+
+.dialog > button:hover {
+  background-color: var(--white);
+  color: var(--orange);
+}
+
+.thank-you-dialog {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+#selected-rating {
+  padding: 0.4rem 1rem;
+  border-radius: 1.5rem;
+  background-color: var(--dark-grey);
+  color: var(--orange);
+  margin-top: 1rem;
+}
+
+.thank-you-dialog > h2 {
+  color: var(--white);
+  font-weight: 700;
+}
